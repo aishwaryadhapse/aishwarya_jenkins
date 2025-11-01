@@ -1,0 +1,14 @@
+pipeline{
+    stages{
+        stage('Checkout code'){
+            steps{
+                checkout scm
+            }
+        }
+        stage('Run extract.py'){
+            steps{
+                bat "python extract.py"
+            }
+        }
+    }
+}
